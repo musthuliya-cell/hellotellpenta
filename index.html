@@ -75,7 +75,7 @@
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Search model (e.g., iPhone 13 Display, Samsung S23, MacBook)..."
+                    placeholder="Search iPhone Display, Android Display, Used iPhone, Android Mobile..."
                     class="w-full pl-10 pr-10 py-2.5 bg-slate-100 border border-transparent focus:bg-white focus:border-blue-500 rounded-xl text-sm outline-none transition"
                 >
                 <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
@@ -86,7 +86,7 @@
             <!-- Category Tabs -->
             <div class="mt-3 flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="categoryTabs">
                 <button onclick="setCategory('all')" data-cat="all" class="cat-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white whitespace-nowrap transition">
-                    All Items
+                    All Categories
                 </button>
                 <button onclick="setCategory('display')" data-cat="display" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
                     <i class="fa-solid fa-mobile-screen mr-1 text-blue-600"></i> Display Replacement
@@ -117,11 +117,11 @@
                     Genuine Mobile Displays &amp; Certified Used Phones
                 </h2>
                 <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                    Choose your exact display quality &amp; budget—from <strong>100% Original Removed (Pulled)</strong> screens to <strong>LED / Market Original, In-cell &amp; LCD</strong> for iPhone and Android. Select any item below and book directly via WhatsApp.
+                    <strong>Original Removed (Pulled)</strong>, <strong>LED / Market Original</strong>, <strong>In-cell</strong> &amp; <strong>LCD</strong> displays for iPhone &amp; Android, plus certified used smartphones at wholesale Kochi prices. Select your category or ask your exact model rate on WhatsApp.
                 </p>
                 <div class="mt-4 flex flex-wrap gap-2.5">
                     <a href="#custom-quote" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-md transition">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> Ask Display Rate for Your Model
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Ask Rate for Your Exact Model
                     </a>
                     <button onclick="toggleQualityGuide()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/15 transition">
                         <i class="fa-solid fa-circle-info"></i> Compare 4 Display Qualities
@@ -148,7 +148,7 @@
                     <div class="flex items-center gap-2 font-bold text-xs text-blue-900">
                         <span class="w-2 h-2 rounded-full bg-blue-600"></span> LED / Market Original
                     </div>
-                    <p class="text-[11px] text-blue-800/80 mt-1">High-brightness OLED/AMOLED replacement with deep blacks &amp; smooth 60Hz/120Hz touch.</p>
+                    <p class="text-[11px] text-blue-800/80 mt-1">High-brightness OLED/AMOLED replacement. iPhone from <strong>₹2,900</strong> &bull; Android from <strong>₹2,800</strong>.</p>
                 </div>
                 <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80">
                     <div class="flex items-center gap-2 font-bold text-xs text-amber-900">
@@ -160,7 +160,7 @@
                     <div class="flex items-center gap-2 font-bold text-xs text-slate-800">
                         <span class="w-2 h-2 rounded-full bg-slate-500"></span> Standard LCD
                     </div>
-                    <p class="text-[11px] text-slate-600 mt-1">Most economical replacement option for daily use and data recovery.</p>
+                    <p class="text-[11px] text-slate-600 mt-1">Economical replacement option. iPhone LCD from <strong>₹1,700</strong> &bull; Android LCD from <strong>₹1,400</strong>.</p>
                 </div>
             </div>
         </section>
@@ -168,8 +168,8 @@
         <!-- Results Header -->
         <div class="flex items-center justify-between mb-4">
             <div>
-                <h3 id="sectionTitle" class="text-base sm:text-lg font-bold text-slate-900">All Mobiles, Displays &amp; Laptops</h3>
-                <p id="sectionSubtitle" class="text-xs text-slate-500">Tap a display quality tier to see live price, then click WhatsApp to book.</p>
+                <h3 id="sectionTitle" class="text-base sm:text-lg font-bold text-slate-900">Store Starting Prices &amp; Categories</h3>
+                <p id="sectionSubtitle" class="text-xs text-slate-500">Select your display grade or phone category, then tap WhatsApp to enquire for your exact model.</p>
             </div>
             <span id="itemCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200/70 text-slate-700">Showing 0 items</span>
         </div>
@@ -184,13 +184,18 @@
             <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3 text-lg">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <h4 class="font-bold text-slate-800">No matching model listed yet</h4>
+            <h4 class="font-bold text-slate-800">Ask for Your Model Directly on WhatsApp</h4>
             <p class="text-xs text-slate-500 max-w-md mx-auto mt-1">
-                We stock displays and parts for almost all iPhone, Samsung, OnePlus, Vivo, Oppo, Realme &amp; Redmi models. Ask us directly on WhatsApp!
+                We stock displays and used phones for all iPhone, Samsung, OnePlus, Vivo, Oppo, Realme &amp; Redmi models. Send your model name below for instant price!
             </p>
-            <button onclick="clearSearch()" class="mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold">
-                Reset Filters
-            </button>
+            <div class="mt-4 flex justify-center gap-2">
+                <button onclick="clearSearch()" class="px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold">
+                    Show All Categories
+                </button>
+                <a href="#custom-quote" class="px-4 py-2 rounded-lg bg-emerald-600 text-white text-xs font-semibold">
+                    Ask Model Price
+                </a>
+            </div>
         </div>
 
         <!-- Custom Model Quote Widget -->
@@ -200,9 +205,9 @@
                     <span class="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">
                         Instant WhatsApp Quote
                     </span>
-                    <h3 class="text-2xl font-extrabold">Looking for Another Model?</h3>
+                    <h3 class="text-2xl font-extrabold">Ask Price for Your Model</h3>
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Enter your phone model and preferred display grade (Original Removed, LED/Market Original, In-cell, or LCD). We will reply immediately with stock availability &amp; best Kochi price.
+                        Type your phone model and choose what you need (Original Removed, LED / Market Original, In-cell, LCD, or Used Phone). We will reply immediately with exact price &amp; stock at Penta Menaka.
                     </p>
                 </div>
 
@@ -214,7 +219,7 @@
                                 type="text"
                                 id="customModel"
                                 required
-                                placeholder="e.g., iPhone 12 Pro / Samsung A54"
+                                placeholder="e.g., iPhone 13 / Samsung A54 / Redmi Note 12"
                                 class="w-full bg-slate-900 text-white placeholder-slate-500 text-sm px-3.5 py-2.5 rounded-lg border border-slate-700 focus:outline-none focus:border-blue-500"
                             >
                         </div>
@@ -228,8 +233,9 @@
                                 <option value="Display - LED / Market Original">Display: LED / Market Original</option>
                                 <option value="Display - In-cell">Display: In-cell</option>
                                 <option value="Display - LCD">Display: LCD</option>
-                                <option value="Used Mobile Purchase / Exchange">Used Mobile Purchase / Exchange</option>
-                                <option value="Laptop / Tablet Service or Purchase">Laptop / Tablet Service or Purchase</option>
+                                <option value="Used iPhone Enquiry">Used iPhone Purchase / Exchange</option>
+                                <option value="Used Android Mobile Enquiry">Used Android Mobile Purchase / Exchange</option>
+                                <option value="Laptop / Tablet / Accessory Enquiry">Laptop / Tablet / Accessory Enquiry</option>
                             </select>
                         </div>
                     </div>
@@ -259,7 +265,7 @@
                 </div>
                 <div class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/50">
                     <h5 class="font-bold text-blue-900 text-sm">2. LED / Market Original (OLED / AMOLED)</h5>
-                    <p class="mt-1">Premium aftermarket OLED/AMOLED screen with vibrant contrast, thin bezels, and smooth touch response. Best balance of flagship quality and price.</p>
+                    <p class="mt-1">Premium aftermarket OLED/AMOLED screen with vibrant contrast, thin bezels, and smooth touch response. <strong>iPhone starting ₹2,900 | Android starting ₹2,800.</strong></p>
                 </div>
                 <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/50">
                     <h5 class="font-bold text-amber-900 text-sm">3. In-cell Display</h5>
@@ -267,7 +273,7 @@
                 </div>
                 <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
                     <h5 class="font-bold text-slate-900 text-sm">4. Standard LCD</h5>
-                    <p class="mt-1">Entry-level replacement panel designed for maximum budget savings or temporary phone usage/data backup.</p>
+                    <p class="mt-1">Entry-level replacement panel designed for maximum budget savings. <strong>iPhone LCD starting ₹1,700 | Android LCD starting ₹1,400.</strong></p>
                 </div>
             </div>
             <div class="px-5 py-3.5 bg-slate-50 border-t border-slate-200 flex justify-end">
@@ -321,121 +327,88 @@
     <script>
         const SHOP_WHATSAPP = "918129219656";
 
-        // Edit or add your shop's products & display prices here
+        // Updated with Hellotell Penta exact starting prices
         const PRODUCTS_DATA = [
             {
-                id: "disp-ip13",
+                id: "disp-iphone-all",
                 category: "display",
                 platform: "iPhone",
-                name: "iPhone 13 Display Replacement",
+                name: "iPhone Display Replacement (All Models)",
                 badge: "Same-Day Fixing",
                 image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=600&q=80",
-                specs: "TrueTone programming included • 30 mins installation at Penta Menaka",
+                specs: "iPhone X, XR, 11, 12, 13, 14, 15 & 16 Series • TrueTone support • 30 mins fitting at Penta Menaka",
+                isStarting: true,
+                defaultTier: 0,
                 tiers: [
-                    { label: "Original Removed", price: 11500, note: "100% Apple Pulled Screen" },
-                    { label: "LED / Market Original", price: 6500, note: "Soft OLED • Deep Blacks" },
-                    { label: "In-cell", price: 3800, note: "Slim Budget Panel" },
-                    { label: "LCD", price: 2900, note: "Basic Economical Screen" }
+                    { label: "LCD (Starting)", price: 1700, note: "Starts from ₹1,700 (Model dependent)" },
+                    { label: "LED / Market Original", price: 2900, note: "Starts from ₹2,900 • High Brightness OLED" },
+                    { label: "In-cell Display", price: 2200, note: "Slim Budget Panel • Ask Model Rate" },
+                    { label: "Original Removed", price: 4500, note: "100% Apple Pulled Screen • Ask Stock" }
                 ]
             },
             {
-                id: "disp-ip11",
-                category: "display",
-                platform: "iPhone",
-                name: "iPhone 11 Display Replacement",
-                badge: "Fast Moving",
-                image: "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=600&q=80",
-                specs: "TrueTone transfer supported • Free tempered glass with fitting",
-                tiers: [
-                    { label: "Original Removed", price: 5200, note: "100% Pulled Original" },
-                    { label: "LED / Market Original", price: 3200, note: "High Brightness Grade" },
-                    { label: "In-cell", price: 2200, note: "Smooth Touch Response" },
-                    { label: "LCD", price: 1750, note: "Standard Replacement" }
-                ]
-            },
-            {
-                id: "disp-s23",
+                id: "disp-android-all",
                 category: "display",
                 platform: "Android",
-                name: "Samsung Galaxy S23 / S22 Display",
-                badge: "Android Flagship",
-                image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
-                specs: "120Hz Dynamic AMOLED • In-display ultrasonic fingerprint tested",
-                tiers: [
-                    { label: "Original Removed", price: 12800, note: "Service Pack / Pulled" },
-                    { label: "LED / Market Original", price: 7900, note: "OLED Frame Included" },
-                    { label: "In-cell", price: 4200, note: "Budget Slim Panel" },
-                    { label: "LCD", price: 3100, note: "Basic Display" }
-                ]
-            },
-            {
-                id: "disp-android-amoled",
-                category: "display",
-                platform: "Android",
-                name: "OnePlus / Vivo / Oppo / Realme Display",
+                name: "Android Display Replacement (All Brands)",
                 badge: "All Android Models",
-                image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
-                specs: "Nord, Reno, V-Series, X-Series, Redmi Note & Poco models available",
+                image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
+                specs: "Samsung, OnePlus, Vivo, Oppo, Realme, Redmi, Poco & Motorola • Fingerprint tested",
+                isStarting: true,
+                defaultTier: 0,
                 tiers: [
-                    { label: "Original Removed", price: 4800, note: "Pulled Genuine Screen" },
-                    { label: "LED / Market Original", price: 2900, note: "OLED / Fingerprint OK" },
-                    { label: "In-cell", price: 1650, note: "Best Value Choice" },
-                    { label: "LCD", price: 1250, note: "Starting Price" }
+                    { label: "LCD (Starting)", price: 1400, note: "Starts from ₹1,400 (Model dependent)" },
+                    { label: "LED / Market Original", price: 2800, note: "Starts from ₹2,800 • AMOLED / OLED" },
+                    { label: "In-cell Display", price: 1800, note: "Slim Value Panel • Ask Model Rate" },
+                    { label: "Original Removed", price: 3900, note: "100% Pulled Genuine Screen • Ask Stock" }
                 ]
             },
             {
-                id: "mob-ip14pro",
+                id: "mob-iphones-used",
                 category: "mobile",
                 platform: "iPhone",
-                name: "iPhone 14 Pro (128GB) - Used Mint",
-                badge: "Certified Pre-Owned",
-                image: "https://images.unsplash.com/photo-1663499482523-1c0c1bae4ce1?auto=format&fit=crop&w=600&q=80",
-                specs: "Deep Purple • Battery Health 89% • Non-opened & Water-seal intact • Bill & Box",
-                price: 56500,
-                condition: "A+ Mint Condition"
+                name: "Certified Pre-Owned iPhones",
+                badge: "Starting ₹6,500",
+                image: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=600&q=80",
+                specs: "Wide range of verified used iPhones in clean condition • Face ID, TrueTone & battery checked • Exchange available",
+                price: 6500,
+                isStarting: true,
+                condition: "Tested & Verified Stock"
             },
             {
-                id: "mob-s23ultra",
+                id: "mob-android-used",
                 category: "mobile",
                 platform: "Android",
-                name: "Samsung Galaxy S23 Ultra 5G (256GB)",
-                badge: "Exchange Available",
-                image: "https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=600&q=80",
-                specs: "Phantom Black • 12GB RAM • S-Pen Included • Store Warranty",
-                price: 54000,
-                condition: "Scratchless Condition"
+                name: "Certified Pre-Owned Android Mobiles",
+                badge: "Starting ₹3,500",
+                image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+                specs: "Samsung, OnePlus, Vivo, Oppo, Realme & Redmi 4G/5G phones • Budget to Flagship models available at Penta Menaka",
+                price: 3500,
+                isStarting: true,
+                condition: "Store Checked & Guaranteed"
             },
             {
-                id: "mob-ip12",
-                category: "mobile",
-                platform: "iPhone",
-                name: "iPhone 12 (128GB) - Pre-Owned",
-                badge: "Best Seller",
-                image: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=600&q=80",
-                specs: "Blue • Battery Health 86% • Face ID & TrueTone 100% Working",
-                price: 25500,
-                condition: "Clean Condition"
-            },
-            {
-                id: "lap-macbook",
+                id: "lap-tablets-used",
                 category: "laptop",
-                platform: "Laptop",
-                name: "MacBook Air M1 (8GB / 256GB) - Used",
-                badge: "Student & Office Pick",
+                platform: "Laptop & Tablet",
+                name: "Used Laptops & Tablets (MacBook / Windows / iPad)",
+                badge: "Kochi Store Stock",
                 image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80",
-                specs: "Space Grey • 91% Battery Health • Original Charger Included • Kochi Store Stock",
-                price: 43500,
-                condition: "Excellent Condition"
+                specs: "Pre-owned MacBooks, Windows laptops & iPads for students, office & business use • Enquire for current stock",
+                price: null,
+                priceText: "Ask Today's Stock",
+                condition: "Checked & Ready"
             },
             {
-                id: "acc-charger",
+                id: "acc-all",
                 category: "accessory",
                 platform: "Accessories",
-                name: "20W USB-C Fast Adapter & Braided Cable",
-                badge: "100% Genuine",
+                name: "Chargers, Cables, Tempered Glass & Back Cases",
+                badge: "In-Store Available",
                 image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
-                specs: "Compatible with iPhone 11 to 16 Series, iPad & Samsung Fast Charging",
-                price: 1490,
+                specs: "Original & fast adapters, braided cables, UV/matte tempered glass, AirPods & protective cases for all models",
+                price: null,
+                priceText: "Best Store Price",
                 condition: "Brand New"
             }
         ];
@@ -445,7 +418,7 @@
         const selectedTierIndex = {};
 
         PRODUCTS_DATA.forEach(item => {
-            if (item.tiers) selectedTierIndex[item.id] = 0;
+            if (item.tiers) selectedTierIndex[item.id] = item.defaultTier || 0;
         });
 
         function formatINR(amount) {
@@ -465,9 +438,9 @@
             });
 
             const titles = {
-                all: "All Mobiles, Displays & Laptops",
+                all: "Store Starting Prices & Categories",
                 display: "Mobile Display Replacement (iPhone & Android)",
-                mobile: "Certified Used Smartphones",
+                mobile: "Certified Used Smartphones (iPhone & Android)",
                 laptop: "Used Laptops & Tablets",
                 accessory: "Chargers, Tempered Glass & Accessories"
             };
@@ -521,7 +494,7 @@ Please share price and availability.`;
                 return matchesCat && matchesQuery;
             });
 
-            countLabel.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? "item" : "items"}`;
+            countLabel.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? "category" : "categories"}`;
 
             if (filtered.length === 0) {
                 grid.innerHTML = "";
@@ -544,16 +517,18 @@ Please share price and availability.`;
                     activeTierNote = tier.note;
                 }
 
+                const displayPriceHTML = activePrice !== null
+                    ? `${formatINR(activePrice)}<span class="text-xs font-semibold text-slate-500 ml-1">onwards</span>`
+                    : `<span class="text-base font-extrabold text-blue-700">${item.priceText}</span>`;
+
                 const waMessage = isDisplay
-                    ? `Hi Hellotell Penta, I want to book Display Replacement:
-• Model: ${item.name}
-• Quality: ${activeTierName}
-• Listed Price: ${formatINR(activePrice)}
-Is it available today?`
-                    : `Hi Hellotell Penta, I am interested in buying:
-• Item: ${item.name}
-• Price: ${formatINR(activePrice)}
-Please share more details.`;
+                    ? `Hi Hellotell Penta, I want to know the exact Display Replacement rate:
+• Category: ${item.name}
+• Preferred Quality: ${activeTierName} (Starting ${formatINR(activePrice)})
+• My Phone Model: `
+                    : activePrice !== null
+                        ? `Hi Hellotell Penta, I am looking for ${item.name} (Starting ${formatINR(activePrice)}). Please share available models & prices.`
+                        : `Hi Hellotell Penta, I want to enquire about ${item.name}. Please share current availability & price.`;
 
                 const waLink = `https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(waMessage)}`;
 
@@ -589,7 +564,7 @@ Please share more details.`;
                                                     }"
                                                 >
                                                     <div class="truncate">${t.label}</div>
-                                                    <div class="text-[10px] ${isSelected ? "text-blue-100" : "text-slate-500"}">${formatINR(t.price)}</div>
+                                                    <div class="text-[10px] ${isSelected ? "text-blue-100" : "text-slate-500"}">From ${formatINR(t.price)}</div>
                                                 </button>
                                             `;
                                         }).join("")}
@@ -608,8 +583,8 @@ Please share more details.`;
 
                     <div class="px-4 pb-4 pt-2 border-t border-slate-100 flex items-center justify-between gap-3">
                         <div>
-                            <span class="block text-[10px] uppercase font-semibold text-slate-400">${isDisplay ? "Selected Rate" : "Offer Price"}</span>
-                            <span class="text-lg font-extrabold text-slate-900">${formatINR(activePrice)}</span>
+                            <span class="block text-[10px] uppercase font-semibold text-slate-400">${activePrice !== null ? "Starting Price" : "Store Rate"}</span>
+                            <span class="text-lg font-extrabold text-slate-900">${displayPriceHTML}</span>
                         </div>
                         <a
                             href="${waLink}"
@@ -617,7 +592,7 @@ Please share more details.`;
                             class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition"
                         >
                             <i class="fa-brands fa-whatsapp text-sm"></i>
-                            ${isDisplay ? "Book Now" : "Order"}
+                            Ask Model
                         </a>
                     </div>
                 </article>
