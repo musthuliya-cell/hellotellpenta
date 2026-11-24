@@ -106,6 +106,9 @@
                 <button onclick="setCategory('laptop')" data-cat="laptop" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0 transition">
                     <i class="fa-solid fa-laptop mr-1 text-purple-600"></i> Laptops
                 </button>
+                <button onclick="setCategory('service')" data-cat="service" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0 transition">
+                    <i class="fa-solid fa-right-left mr-1 text-rose-600"></i> Data Transfer &amp; Services
+                </button>
                 <button onclick="setCategory('accessory')" data-cat="accessory" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap shrink-0 transition">
                     <i class="fa-solid fa-headphones mr-1 text-amber-600"></i> Accessories
                 </button>
@@ -132,7 +135,7 @@
                         Genuine Mobile Displays, Batteries &amp; Certified Used Phones
                     </h2>
                     <p class="text-slate-600 text-xs sm:text-sm mt-2.5 leading-relaxed">
-                        <strong>iPhone Battery from ₹1,800</strong> &amp; <strong>Android Battery from ₹1,200</strong> with <strong>6 Months Replacement Warranty</strong>. Plus Original Removed, LED, In-cell &amp; LCD displays with <strong>FREE Tempered Glass</strong>!
+                        <strong>30 Minutes Express Service</strong> available at Penta Menaka &bull; <strong>All India Delivery &amp; Courier Service</strong> available. <strong>iPhone Battery from ₹1,800</strong> &amp; <strong>Android Battery from ₹1,200</strong> (6 Months Replacement Warranty), plus Displays with <strong>FREE Tempered Glass</strong>!
                     </p>
                     <div class="mt-5 flex flex-wrap gap-2.5">
                         <a href="#custom-quote" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-xs transition">
@@ -174,6 +177,46 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Store Services & Delivery Highlights Strip -->
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+            <div class="bg-white rounded-2xl border border-slate-200 p-3.5 shadow-xs flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center shrink-0 text-sm">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs text-slate-900">30 Mins Express Service</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">Fast display &amp; battery replacement while you wait.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-slate-200 p-3.5 shadow-xs flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center shrink-0 text-sm">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs text-slate-900">All India Delivery</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">Safe shipping across India for phones &amp; accessories.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-slate-200 p-3.5 shadow-xs flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center shrink-0 text-sm">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs text-slate-900">Courier Service Available</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">Doorstep courier pickup &amp; delivery support.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-slate-200 p-3.5 shadow-xs flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center shrink-0 text-sm">
+                    <i class="fa-solid fa-right-left"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs text-slate-900">Zero-Loss Data Transfer</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">Android &harr; Android, iPhone &harr; Android &amp; iPhone &harr; iPhone.</p>
                 </div>
             </div>
         </section>
@@ -305,6 +348,8 @@
                                 <option value="Display - LCD + Free Glass">Display: LCD (+ Free Glass)</option>
                                 <option value="Used iPhone Enquiry">Used iPhone Purchase / Exchange</option>
                                 <option value="Used Android Mobile Enquiry">Used Android Mobile Purchase / Exchange</option>
+                                <option value="Data Transfer Service (100% No Data Loss)">Data Transfer (Android / iPhone - No Data Loss)</option>
+                                <option value="All India Delivery / Courier Service Enquiry">All India Delivery / Courier Service Enquiry</option>
                                 <option value="Laptop / Tablet / Accessory Enquiry">Laptop / Tablet / Accessory Enquiry</option>
                             </select>
                         </div>
@@ -516,6 +561,30 @@
                 condition: "Checked & Ready"
             },
             {
+                id: "srv-data-transfer",
+                category: "service",
+                platform: "100% Safe",
+                name: "Complete Phone Data Transfer (Zero Data Loss)",
+                badge: "No Data Loss",
+                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+                specs: "Android to Android • iPhone to Android • iPhone to iPhone • WhatsApp chats, photos, videos, contacts & apps transferred safely with zero data loss",
+                price: null,
+                priceText: "30 Mins Express",
+                condition: "100% Privacy & Zero Data Loss"
+            },
+            {
+                id: "srv-courier-delivery",
+                category: "service",
+                platform: "Pan India",
+                name: "All India Delivery & Courier Service",
+                badge: "All India Shipping",
+                image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
+                specs: "Fast & insured courier delivery across India for certified pre-owned phones, laptops, displays & accessories • 30 mins express service at Kochi store",
+                price: null,
+                priceText: "All India Courier",
+                condition: "Safe & Tracked Delivery"
+            },
+            {
                 id: "acc-all",
                 category: "accessory",
                 platform: "Accessories",
@@ -559,6 +628,7 @@
                 battery: "Mobile Battery Replacement (6 Months Warranty)",
                 mobile: "Certified Used Smartphones (iPhone & Android)",
                 laptop: "Used Laptops & Tablets",
+                service: "Data Transfer (No Data Loss) & All India Courier Services",
                 accessory: "Chargers, Tempered Glass & Accessories"
             };
             document.getElementById("sectionTitle").textContent = titles[cat] || titles.all;
