@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hellotell Penta | Mobiles, Display Replacement & Laptops - Kochi</title>
+    <title>Hellotell Penta | Mobiles, Display, Battery Replacement & Laptops - Kochi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
             </div>
             <div class="flex items-center gap-4">
                 <span class="hidden md:inline-flex items-center gap-1 text-emerald-400 font-medium">
-                    <i class="fa-solid fa-bolt"></i> Same-Day Display Replacement
+                    <i class="fa-solid fa-gift"></i> FREE Tempered Glass with Every Display Change!
                 </span>
                 <a href="tel:+918129219656" class="hover:text-white font-semibold flex items-center gap-1">
                     <i class="fa-solid fa-phone text-blue-400"></i> +91 81292 19656
@@ -54,7 +54,7 @@
                         <h1 class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 leading-none">
                             HELLOTELL <span class="text-blue-600">PENTA</span>
                         </h1>
-                        <p class="text-[11px] text-slate-500 font-medium mt-0.5">Mobiles &bull; Display Specialist &bull; Laptops</p>
+                        <p class="text-[11px] text-slate-500 font-medium mt-0.5">Mobiles &bull; Display &amp; Battery Specialist &bull; Laptops</p>
                     </div>
                 </a>
 
@@ -63,7 +63,7 @@
                     <a href="tel:+918129219656" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold transition">
                         <i class="fa-solid fa-phone text-blue-600"></i> Call Shop
                     </a>
-                    <a href="https://wa.me/918129219656?text=Hi%20Hellotell%20Penta%2C%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20%2F%20display." target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition">
+                    <a href="https://wa.me/918129219656?text=Hi%20Hellotell%20Penta%2C%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20%2F%20display%20%2F%20battery." target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition">
                         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
                     </a>
                 </div>
@@ -75,7 +75,7 @@
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Search iPhone Display, Android Display, Used iPhone, Android Mobile..."
+                    placeholder="Search iPhone Battery, Android Battery, iPhone Display, Used iPhone..."
                     class="w-full pl-10 pr-10 py-2.5 bg-slate-100 border border-transparent focus:bg-white focus:border-blue-500 rounded-xl text-sm outline-none transition"
                 >
                 <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
@@ -89,7 +89,10 @@
                     All Categories
                 </button>
                 <button onclick="setCategory('display')" data-cat="display" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
-                    <i class="fa-solid fa-mobile-screen mr-1 text-blue-600"></i> Display Replacement
+                    <i class="fa-solid fa-mobile-screen mr-1 text-blue-600"></i> Display + Free Glass
+                </button>
+                <button onclick="setCategory('battery')" data-cat="battery" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
+                    <i class="fa-solid fa-battery-full mr-1 text-emerald-600"></i> Battery Replacement
                 </button>
                 <button onclick="setCategory('mobile')" data-cat="mobile" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
                     <i class="fa-solid fa-mobile-button mr-1 text-indigo-600"></i> Used Mobiles
@@ -107,17 +110,40 @@
     <!-- Main Content Container -->
     <main class="max-w-6xl mx-auto px-4 py-6">
 
+        <!-- Special Offer Banner -->
+        <section class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-700 to-emerald-800 text-white p-6 sm:p-8 mb-6 shadow-xl border border-emerald-500/30">
+            <div class="relative z-10 max-w-2xl">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-3 backdrop-blur-sm">
+                    <i class="fa-solid fa-gift"></i> Special Store Offer
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight">
+                    FREE Tempered Glass with Every Display Replacement!
+                </h2>
+                <p class="text-emerald-100 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Get your broken iPhone or Android screen replaced at Hellotell Penta and protect it immediately with a <strong>Premium Tempered Glass completely FREE</strong>. Same-day fitting at Penta Menaka, Kochi.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2.5">
+                    <a href="#custom-quote" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white text-emerald-900 hover:bg-emerald-50 text-xs font-bold shadow-md transition">
+                        <i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i> Claim Offer for Your Phone
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 text-white/15 text-8xl">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+        </section>
+
         <!-- Hero Banner -->
         <section class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white p-6 sm:p-8 mb-6 shadow-lg">
             <div class="relative z-10 max-w-2xl">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-[11px] font-semibold mb-3">
-                    <i class="fa-solid fa-store"></i> Kochi's Trusted Mobile &amp; Display Hub &bull; Penta Menaka
+                    <i class="fa-solid fa-store"></i> Kochi's Trusted Mobile, Display &amp; Battery Hub &bull; Penta Menaka
                 </span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight">
-                    Genuine Mobile Displays &amp; Certified Used Phones
+                    Genuine Displays, Batteries &amp; Certified Used Phones
                 </h2>
                 <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                    <strong>Original Removed (Pulled)</strong>, <strong>LED / Market Original</strong>, <strong>In-cell</strong> &amp; <strong>LCD</strong> displays for iPhone &amp; Android, plus certified used smartphones at wholesale Kochi prices. Select your category or ask your exact model rate on WhatsApp.
+                    <strong>iPhone Battery from ₹1,800</strong> &amp; <strong>Android Battery from ₹1,200</strong> with <strong>6 Months Replacement Warranty</strong>. Plus Original Removed, LED, In-cell &amp; LCD displays with Free Tempered Glass!
                 </p>
                 <div class="mt-4 flex flex-wrap gap-2.5">
                     <a href="#custom-quote" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-md transition">
@@ -134,7 +160,7 @@
         <!-- Display Quality Legend Strip -->
         <section class="bg-white rounded-2xl border border-slate-200 p-4 mb-6 shadow-sm">
             <div class="flex items-center justify-between mb-3">
-                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Available Display Categories (iPhone &amp; Android)</h3>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Available Display Categories (All Include FREE Tempered Glass)</h3>
                 <button onclick="toggleQualityGuide()" class="text-xs font-semibold text-blue-600 hover:underline">Quality Guide &rarr;</button>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
@@ -169,7 +195,7 @@
         <div class="flex items-center justify-between mb-4">
             <div>
                 <h3 id="sectionTitle" class="text-base sm:text-lg font-bold text-slate-900">Store Starting Prices &amp; Categories</h3>
-                <p id="sectionSubtitle" class="text-xs text-slate-500">Select your display grade or phone category, then tap WhatsApp to enquire for your exact model.</p>
+                <p id="sectionSubtitle" class="text-xs text-slate-500">Select your display grade, battery or phone category, then tap WhatsApp to enquire for your exact model.</p>
             </div>
             <span id="itemCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200/70 text-slate-700">Showing 0 items</span>
         </div>
@@ -186,7 +212,7 @@
             </div>
             <h4 class="font-bold text-slate-800">Ask for Your Model Directly on WhatsApp</h4>
             <p class="text-xs text-slate-500 max-w-md mx-auto mt-1">
-                We stock displays and used phones for all iPhone, Samsung, OnePlus, Vivo, Oppo, Realme &amp; Redmi models. Send your model name below for instant price!
+                We stock displays, batteries, and used phones for all iPhone, Samsung, OnePlus, Vivo, Oppo, Realme &amp; Redmi models. Send your model name below for instant price!
             </p>
             <div class="mt-4 flex justify-center gap-2">
                 <button onclick="clearSearch()" class="px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold">
@@ -207,7 +233,7 @@
                     </span>
                     <h3 class="text-2xl font-extrabold">Ask Price for Your Model</h3>
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Type your phone model and choose what you need (Original Removed, LED / Market Original, In-cell, LCD, or Used Phone). We will reply immediately with exact price &amp; stock at Penta Menaka.
+                        Type your phone model and choose what you need (Display with FREE Tempered Glass, Battery with 6 Months Replacement Warranty, or Used Phone). We will reply immediately with exact price &amp; stock at Penta Menaka.
                     </p>
                 </div>
 
@@ -229,17 +255,20 @@
                                 id="customRequirement"
                                 class="w-full bg-slate-900 text-white text-sm px-3.5 py-2.5 rounded-lg border border-slate-700 focus:outline-none focus:border-blue-500"
                             >
-                                <option value="Display - Original Removed (Pulled)">Display: Original Removed (Pulled)</option>
-                                <option value="Display - LED / Market Original">Display: LED / Market Original</option>
-                                <option value="Display - In-cell">Display: In-cell</option>
-                                <option value="Display - LCD">Display: LCD</option>
+                                <option value="Display Replacement (+ FREE Tempered Glass Offer)">Display Replacement (+ FREE Tempered Glass)</option>
+                                <option value="iPhone Battery Replacement (Starting ₹1,800 • 6 Months Warranty)">iPhone Battery (6 Months Warranty)</option>
+                                <option value="Android Battery Replacement (Starting ₹1,200 • 6 Months Warranty)">Android Battery (6 Months Warranty)</option>
+                                <option value="Display - Original Removed (Pulled) + Free Glass">Display: Original Removed (+ Free Glass)</option>
+                                <option value="Display - LED / Market Original + Free Glass">Display: LED / Market Original (+ Free Glass)</option>
+                                <option value="Display - In-cell + Free Glass">Display: In-cell (+ Free Glass)</option>
+                                <option value="Display - LCD + Free Glass">Display: LCD (+ Free Glass)</option>
                                 <option value="Used iPhone Enquiry">Used iPhone Purchase / Exchange</option>
                                 <option value="Used Android Mobile Enquiry">Used Android Mobile Purchase / Exchange</option>
                                 <option value="Laptop / Tablet / Accessory Enquiry">Laptop / Tablet / Accessory Enquiry</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition">
+                    <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition cursor-pointer">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                         Send Enquiry to 81292 19656
                     </button>
@@ -260,24 +289,36 @@
             </div>
             <div class="p-5 space-y-4 text-xs sm:text-sm text-slate-700">
                 <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50">
-                    <h5 class="font-bold text-emerald-900 text-sm">1. Original Removed (Pulled from Phone)</h5>
+                    <div class="flex items-center justify-between">
+                        <h5 class="font-bold text-emerald-900 text-sm">1. Original Removed (Pulled from Phone)</h5>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-600 text-white">+ FREE Glass</span>
+                    </div>
                     <p class="mt-1">100% authentic factory display extracted from an original device. Retains exact factory colors, brightness, glass durability, TrueTone (iPhone), and in-display fingerprint speed (Android).</p>
                 </div>
                 <div class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/50">
-                    <h5 class="font-bold text-blue-900 text-sm">2. LED / Market Original (OLED / AMOLED)</h5>
+                    <div class="flex items-center justify-between">
+                        <h5 class="font-bold text-blue-900 text-sm">2. LED / Market Original (OLED / AMOLED)</h5>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white">+ FREE Glass</span>
+                    </div>
                     <p class="mt-1">Premium aftermarket OLED/AMOLED screen with vibrant contrast, thin bezels, and smooth touch response. <strong>iPhone starting ₹2,900 | Android starting ₹2,800.</strong></p>
                 </div>
                 <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/50">
-                    <h5 class="font-bold text-amber-900 text-sm">3. In-cell Display</h5>
+                    <div class="flex items-center justify-between">
+                        <h5 class="font-bold text-amber-900 text-sm">3. In-cell Display</h5>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-white">+ FREE Glass</span>
+                    </div>
                     <p class="mt-1">Integrated touch-and-display panel that is thinner and brighter than standard LCDs. Reliable everyday performance at an affordable cost.</p>
                 </div>
                 <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
-                    <h5 class="font-bold text-slate-900 text-sm">4. Standard LCD</h5>
+                    <div class="flex items-center justify-between">
+                        <h5 class="font-bold text-slate-900 text-sm">4. Standard LCD</h5>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-white">+ FREE Glass</span>
+                    </div>
                     <p class="mt-1">Entry-level replacement panel designed for maximum budget savings. <strong>iPhone LCD starting ₹1,700 | Android LCD starting ₹1,400.</strong></p>
                 </div>
             </div>
             <div class="px-5 py-3.5 bg-slate-50 border-t border-slate-200 flex justify-end">
-                <button onclick="toggleQualityGuide()" class="px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold">Got It</button>
+                <button onclick="toggleQualityGuide()" class="px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold cursor-pointer">Got It</button>
             </div>
         </div>
     </div>
@@ -288,7 +329,7 @@
             <div>
                 <h4 class="text-white font-extrabold text-lg tracking-tight">HELLOTELL <span class="text-blue-400">PENTA</span></h4>
                 <p class="text-slate-400 mt-2 leading-relaxed">
-                    Your one-stop destination in Kochi for certified pre-owned smartphones, used laptops, tablets, accessories, and professional same-day display replacements.
+                    Your one-stop destination in Kochi for certified pre-owned smartphones, used laptops, tablets, accessories, and professional same-day display &amp; battery replacements.
                 </p>
             </div>
             <div>
@@ -301,13 +342,13 @@
             <div>
                 <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Contact &amp; Orders</h5>
                 <div class="space-y-2">
-                    <a href="tel:+918129219656" class="flex items-center gap-2 hover:text-white">
+                    <a href="tel:+918129219656" class="flex items-center gap-2 hover:text-white transition cursor-pointer">
                         <i class="fa-solid fa-phone text-blue-400"></i> +91 81292 19656
                     </a>
-                    <a href="https://wa.me/918129219656" target="_blank" class="flex items-center gap-2 hover:text-emerald-400">
+                    <a href="https://wa.me/918129219656" target="_blank" class="flex items-center gap-2 hover:text-emerald-400 transition cursor-pointer">
                         <i class="fa-brands fa-whatsapp text-emerald-400"></i> Chat on WhatsApp
                     </a>
-                    <a href="https://maps.google.com/?q=Penta+Menaka+Shanmugham+Road+Kochi" target="_blank" class="inline-flex items-center gap-1.5 mt-2 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">
+                    <a href="https://maps.google.com/?q=Penta+Menaka+Shanmugham+Road+Kochi" target="_blank" class="inline-flex items-center gap-1.5 mt-2 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition cursor-pointer">
                         <i class="fa-solid fa-map-location-dot text-blue-400"></i> Open in Google Maps
                     </a>
                 </div>
@@ -319,7 +360,7 @@
     </footer>
 
     <!-- Floating Mobile WhatsApp Button -->
-    <a href="https://wa.me/918129219656?text=Hi%20Hellotell%20Penta%2C%20I%20visited%20your%20online%20store%20and%20have%20an%20enquiry." target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-600/30 flex items-center justify-center text-2xl transition transform hover:scale-105">
+    <a href="https://wa.me/918129219656?text=Hi%20Hellotell%20Penta%2C%20I%20visited%20your%20online%20store%20and%20have%20an%20enquiry." target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-600/30 flex items-center justify-center text-2xl transition transform hover:scale-105 cursor-pointer">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -327,41 +368,65 @@
     <script>
         const SHOP_WHATSAPP = "918129219656";
 
-        // Updated with Hellotell Penta exact starting prices
+        // Updated with Hellotell Penta exact pricing & FREE Tempered Glass offer
         const PRODUCTS_DATA = [
             {
                 id: "disp-iphone-all",
                 category: "display",
                 platform: "iPhone",
-                name: "iPhone Display Replacement (All Models)",
-                badge: "Same-Day Fixing",
+                name: "iPhone Display Replacement (FREE Tempered Glass)",
+                badge: "FREE Tempered Glass",
                 image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=600&q=80",
-                specs: "iPhone X, XR, 11, 12, 13, 14, 15 & 16 Series • TrueTone support • 30 mins fitting at Penta Menaka",
+                specs: "iPhone X, XR, 11, 12, 13, 14, 15 & 16 Series • Free Premium Tempered Glass included • 30 mins fitting at Penta Menaka",
                 isStarting: true,
                 defaultTier: 0,
                 tiers: [
-                    { label: "LCD (Starting)", price: 1700, note: "Starts from ₹1,700 (Model dependent)" },
-                    { label: "LED / Market Original", price: 2900, note: "Starts from ₹2,900 • High Brightness OLED" },
-                    { label: "In-cell Display", price: 2200, note: "Slim Budget Panel • Ask Model Rate" },
-                    { label: "Original Removed", price: 4500, note: "100% Apple Pulled Screen • Ask Stock" }
+                    { label: "LCD (Starting)", price: 1700, note: "Starts from ₹1,700 + FREE Tempered Glass" },
+                    { label: "LED / Market Original", price: 2900, note: "Starts from ₹2,900 + FREE Tempered Glass" },
+                    { label: "In-cell Display", price: 2200, note: "Slim Budget Panel + FREE Tempered Glass" },
+                    { label: "Original Removed", price: 4500, note: "100% Apple Pulled Screen + FREE Tempered Glass" }
                 ]
             },
             {
                 id: "disp-android-all",
                 category: "display",
                 platform: "Android",
-                name: "Android Display Replacement (All Brands)",
-                badge: "All Android Models",
+                name: "Android Display Replacement (FREE Tempered Glass)",
+                badge: "FREE Tempered Glass",
                 image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
-                specs: "Samsung, OnePlus, Vivo, Oppo, Realme, Redmi, Poco & Motorola • Fingerprint tested",
+                specs: "Samsung, OnePlus, Vivo, Oppo, Realme, Redmi, Poco & Motorola • Free Tempered Glass included • Fingerprint tested",
                 isStarting: true,
                 defaultTier: 0,
                 tiers: [
-                    { label: "LCD (Starting)", price: 1400, note: "Starts from ₹1,400 (Model dependent)" },
-                    { label: "LED / Market Original", price: 2800, note: "Starts from ₹2,800 • AMOLED / OLED" },
-                    { label: "In-cell Display", price: 1800, note: "Slim Value Panel • Ask Model Rate" },
-                    { label: "Original Removed", price: 3900, note: "100% Pulled Genuine Screen • Ask Stock" }
+                    { label: "LCD (Starting)", price: 1400, note: "Starts from ₹1,400 + FREE Tempered Glass" },
+                    { label: "LED / Market Original", price: 2800, note: "Starts from ₹2,800 + FREE Tempered Glass" },
+                    { label: "In-cell Display", price: 1800, note: "Slim Value Panel + FREE Tempered Glass" },
+                    { label: "Original Removed", price: 3900, note: "100% Pulled Genuine Screen + FREE Glass" }
                 ]
+            },
+            {
+                id: "bat-iphone-all",
+                category: "battery",
+                platform: "iPhone",
+                name: "iPhone Battery Replacement",
+                badge: "6 Months Warranty",
+                image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=600&q=80",
+                specs: "High-capacity zero-cycle cells for iPhone 7, 8, X, XR, XS, 11, 12, 13, 14 & 15 Series • 20 mins quick replacement at Penta Menaka",
+                price: 1800,
+                isStarting: true,
+                condition: "6 Months Replacement Warranty"
+            },
+            {
+                id: "bat-android-all",
+                category: "battery",
+                platform: "Android",
+                name: "Android Battery Replacement",
+                badge: "6 Months Warranty",
+                image: "https://images.unsplash.com/photo-1591337676887-a217a4570a8d?auto=format&fit=crop&w=600&q=80",
+                specs: "Reliable battery replacements for Samsung, OnePlus, Redmi, Realme, Vivo & Oppo • Fast installation with warranty",
+                price: 1200,
+                isStarting: true,
+                condition: "6 Months Replacement Warranty"
             },
             {
                 id: "mob-iphones-used",
@@ -439,7 +504,8 @@
 
             const titles = {
                 all: "Store Starting Prices & Categories",
-                display: "Mobile Display Replacement (iPhone & Android)",
+                display: "Mobile Display Replacement (+ FREE Tempered Glass)",
+                battery: "Mobile Battery Replacement (6 Months Warranty)",
                 mobile: "Certified Used Smartphones (iPhone & Android)",
                 laptop: "Used Laptops & Tablets",
                 accessory: "Chargers, Tempered Glass & Accessories"
@@ -471,10 +537,7 @@
             const model = document.getElementById("customModel").value.trim();
             const req = document.getElementById("customRequirement").value;
             if (!model) return;
-            const msg = `Hi Hellotell Penta, I need a quote:
-• Model: ${model}
-• Requirement: ${req}
-Please share price and availability.`;
+            const msg = `Hi Hellotell Penta, I need a quote:\n• Model: ${model}\n• Requirement: ${req}\nPlease share price and availability.`;
             window.open(`https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
         }
 
@@ -490,7 +553,8 @@ Please share price and availability.`;
                     !q ||
                     item.name.toLowerCase().includes(q) ||
                     item.specs.toLowerCase().includes(q) ||
-                    (item.platform && item.platform.toLowerCase().includes(q));
+                    (item.platform && item.platform.toLowerCase().includes(q)) ||
+                    (item.condition && item.condition.toLowerCase().includes(q));
                 return matchesCat && matchesQuery;
             });
 
@@ -522,13 +586,12 @@ Please share price and availability.`;
                     : `<span class="text-base font-extrabold text-blue-700">${item.priceText}</span>`;
 
                 const waMessage = isDisplay
-                    ? `Hi Hellotell Penta, I want to know the exact Display Replacement rate:
-• Category: ${item.name}
-• Preferred Quality: ${activeTierName} (Starting ${formatINR(activePrice)})
-• My Phone Model: `
-                    : activePrice !== null
-                        ? `Hi Hellotell Penta, I am looking for ${item.name} (Starting ${formatINR(activePrice)}). Please share available models & prices.`
-                        : `Hi Hellotell Penta, I want to enquire about ${item.name}. Please share current availability & price.`;
+                    ? `Hi Hellotell Penta, I want to know the exact Display Replacement rate (including the FREE Tempered Glass offer):\n• Category: ${item.name}\n• Preferred Quality: ${activeTierName} (Starting ${formatINR(activePrice)})\n• My Phone Model: `
+                    : item.category === "battery"
+                        ? `Hi Hellotell Penta, I want to enquire about ${item.name} (Starting ${formatINR(activePrice)} with ${item.condition}).\n• My Model: `
+                        : activePrice !== null
+                            ? `Hi Hellotell Penta, I am looking for ${item.name} (Starting ${formatINR(activePrice)}). Please share available models & prices.`
+                            : `Hi Hellotell Penta, I want to enquire about ${item.name}. Please share current availability & price.`;
 
                 const waLink = `https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(waMessage)}`;
 
@@ -537,7 +600,7 @@ Please share price and availability.`;
                     <div>
                         <div class="relative h-44 bg-slate-100 overflow-hidden">
                             <img src="${item.image}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-900/85 text-white backdrop-blur-sm">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-bold ${item.category === 'display' ? 'bg-emerald-600 text-white' : 'bg-slate-900/85 text-white'} backdrop-blur-sm">
                                 ${item.badge}
                             </span>
                             ${item.platform ? `<span class="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 text-slate-800">${item.platform}</span>` : ""}
@@ -557,7 +620,7 @@ Please share price and availability.`;
                                                 <button
                                                     type="button"
                                                     onclick="selectTier('${item.id}', ${i})"
-                                                    class="text-left px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold transition ${
+                                                    class="text-left px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold transition cursor-pointer ${
                                                         isSelected
                                                             ? "bg-blue-600 text-white border-blue-600 shadow-sm"
                                                             : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
@@ -569,8 +632,8 @@ Please share price and availability.`;
                                             `;
                                         }).join("")}
                                     </div>
-                                    <p class="text-[11px] text-blue-700 font-medium mt-2">
-                                        <i class="fa-solid fa-circle-check mr-1"></i> ${activeTierName}: ${activeTierNote}
+                                    <p class="text-[11px] text-emerald-700 font-semibold mt-2 flex items-center gap-1">
+                                        <i class="fa-solid fa-gift text-emerald-600"></i> ${activeTierName}: FREE Tempered Glass Included!
                                     </p>
                                 </div>
                             ` : `
@@ -589,10 +652,10 @@ Please share price and availability.`;
                         <a
                             href="${waLink}"
                             target="_blank"
-                            class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition"
+                            class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition cursor-pointer"
                         >
                             <i class="fa-brands fa-whatsapp text-sm"></i>
-                            Ask Model
+                            Enquire
                         </a>
                     </div>
                 </article>
