@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellotell Penta | Mobiles, Display Replacement & Laptops - Kochi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Top Store Info Bar -->
+    <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5 text-center sm:text-left">
+            <div class="flex items-center gap-1.5">
+                <i class="fa-solid fa-location-dot text-blue-400"></i>
+                <span>Ground Floor, Penta Menaka, Shanmugham Road, Kochi - 682031</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="hidden md:inline-flex items-center gap-1 text-emerald-400 font-medium">
+                    <i class="fa-solid fa-bolt"></i> Same-Day Display Replacement
+                </span>
+                <a href="tel:+918129219656" class="hover:text-white font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-blue-400"></i> +91 81292 19656
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between gap-3">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-2.5 shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex items-center justify-center font-extrabold text-xl shadow-md shadow-blue-600/20">
+                        H
+                    </div>
+                    <div>
+                        <h1 class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 leading-none">
+                            HELLOTELL <span class="text-blue-600">PENTA</span>
+                        </h1>
+                        <p class="text-[11px] text-slate-500 font-medium mt-0.5">Mobiles &bull; Display Specialist &bull; Laptops</p>
+                    </div>
+                </a>
+
+                <!-- Quick Action Buttons -->
+                <div class="flex items-center gap-2">
+                    <a href="tel:+918129219656" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold transition">
+                        <i class="fa-solid fa-phone text-blue-600"></i> Call Shop
+                    </a>
+                    <a href="https://wa.me/918129219656?text=Hi%20Hellotell%20Penta%2C%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20%2F%20display." target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm transition">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mt-3 relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search model (e.g., iPhone 13 Display, Samsung S23, MacBook)..."
+                    class="w-full pl-10 pr-10 py-2.5 bg-slate-100 border border-transparent focus:bg-white focus:border-blue-500 rounded-xl text-sm outline-none transition"
+                >
+                <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="mt-3 flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="categoryTabs">
+                <button onclick="setCategory('all')" data-cat="all" class="cat-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white whitespace-nowrap transition">
+                    All Items
+                </button>
+                <button onclick="setCategory('display')" data-cat="display" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
+                    <i class="fa-solid fa-mobile-screen mr-1 text-blue-600"></i> Display Replacement
+                </button>
+                <button onclick="setCategory('mobile')" data-cat="mobile" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
+                    <i class="fa-solid fa-mobile-button mr-1 text-indigo-600"></i> Used Mobiles
+                </button>
+                <button onclick="setCategory('laptop')" data-cat="laptop" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
+                    <i class="fa-solid fa-laptop mr-1 text-purple-600"></i> Laptops &amp; Tablets
+                </button>
+                <button onclick="setCategory('accessory')" data-cat="accessory" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 whitespace-nowrap transition">
+                    <i class="fa-solid fa-headphones mr-1 text-amber-600"></i> Accessories
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 py-6">
+
+        <!-- Hero Banner -->
+        <section class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white p-6 sm:p-8 mb-6 shadow-lg">
+            <div class="relative z-10 max-w-2xl">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-[11px] font-semibold mb-3">
+                    <i class="fa-solid fa-store"></i> Kochi's Trusted Mobile &amp; Display Hub &bull; Penta Menaka
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight">
+                    Genuine Mobile Displays &amp; Certified Used Phones
+                </h2>
+                <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Choose your exact display quality &amp; budget—from <strong>100% Original Removed (Pulled)</strong> screens to <strong>LED / Market Original, In-cell &amp; LCD</strong> for iPhone and Android. Select any item below and book directly via WhatsApp.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2.5">
+                    <a href="#custom-quote" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-md transition">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Ask Display Rate for Your Model
+                    </a>
+                    <button onclick="toggleQualityGuide()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/15 transition">
+                        <i class="fa-solid fa-circle-info"></i> Compare 4 Display Qualities
+                    </button>
+                </div>
+            </div>
+            <div class="hidden lg:block absolute -right-10 -bottom-16 w-72 h-72 rounded-full bg-blue-600/20 blur-3xl"></div>
+        </section>
+
+        <!-- Display Quality Legend Strip -->
+        <section class="bg-white rounded-2xl border border-slate-200 p-4 mb-6 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Available Display Categories (iPhone &amp; Android)</h3>
+                <button onclick="toggleQualityGuide()" class="text-xs font-semibold text-blue-600 hover:underline">Quality Guide &rarr;</button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-200/80">
+                    <div class="flex items-center gap-2 font-bold text-xs text-emerald-900">
+                        <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Original Removed
+                    </div>
+                    <p class="text-[11px] text-emerald-800/80 mt-1">100% genuine screen pulled from original phone. Factory touch &amp; TrueTone/fingerprint support.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80">
+                    <div class="flex items-center gap-2 font-bold text-xs text-blue-900">
+                        <span class="w-2 h-2 rounded-full bg-blue-600"></span> LED / Market Original
+                    </div>
+                    <p class="text-[11px] text-blue-800/80 mt-1">High-brightness OLED/AMOLED replacement with deep blacks &amp; smooth 60Hz/120Hz touch.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80">
+                    <div class="flex items-center gap-2 font-bold text-xs text-amber-900">
+                        <span class="w-2 h-2 rounded-full bg-amber-500"></span> In-cell Display
+                    </div>
+                    <p class="text-[11px] text-amber-800/80 mt-1">Slim profile, good color clarity &amp; responsive touch at a budget-friendly price.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-100/90 border border-slate-200">
+                    <div class="flex items-center gap-2 font-bold text-xs text-slate-800">
+                        <span class="w-2 h-2 rounded-full bg-slate-500"></span> Standard LCD
+                    </div>
+                    <p class="text-[11px] text-slate-600 mt-1">Most economical replacement option for daily use and data recovery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Header -->
+        <div class="flex items-center justify-between mb-4">
+            <div>
+                <h3 id="sectionTitle" class="text-base sm:text-lg font-bold text-slate-900">All Mobiles, Displays &amp; Laptops</h3>
+                <p id="sectionSubtitle" class="text-xs text-slate-500">Tap a display quality tier to see live price, then click WhatsApp to book.</p>
+            </div>
+            <span id="itemCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200/70 text-slate-700">Showing 0 items</span>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Cards rendered dynamically by JavaScript -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div id="emptyState" class="hidden text-center py-14 px-4 bg-white rounded-2xl border border-slate-200">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3 text-lg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h4 class="font-bold text-slate-800">No matching model listed yet</h4>
+            <p class="text-xs text-slate-500 max-w-md mx-auto mt-1">
+                We stock displays and parts for almost all iPhone, Samsung, OnePlus, Vivo, Oppo, Realme &amp; Redmi models. Ask us directly on WhatsApp!
+            </p>
+            <button onclick="clearSearch()" class="mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold">
+                Reset Filters
+            </button>
+        </div>
+
+        <!-- Custom Model Quote Widget -->
+        <section id="custom-quote" class="mt-12 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-5 space-y-2">
+                    <span class="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">
+                        Instant WhatsApp Quote
+                    </span>
+                    <h3 class="text-2xl font-extrabold">Looking for Another Model?</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Enter your phone model and preferred display grade (Original Removed, LED/Market Original, In-cell, or LCD). We will reply immediately with stock availability &amp; best Kochi price.
+                    </p>
+                </div>
+
+                <form onsubmit="sendCustomQuote(event)" class="lg:col-span-7 bg-slate-950/60 border border-slate-700/80 p-5 rounded-xl space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="customModel" class="block text-xs font-semibold text-slate-300 mb-1.5">Phone / Laptop Model *</label>
+                            <input
+                                type="text"
+                                id="customModel"
+                                required
+                                placeholder="e.g., iPhone 12 Pro / Samsung A54"
+                                class="w-full bg-slate-900 text-white placeholder-slate-500 text-sm px-3.5 py-2.5 rounded-lg border border-slate-700 focus:outline-none focus:border-blue-500"
+                            >
+                        </div>
+                        <div>
+                            <label for="customRequirement" class="block text-xs font-semibold text-slate-300 mb-1.5">Service / Quality Type</label>
+                            <select
+                                id="customRequirement"
+                                class="w-full bg-slate-900 text-white text-sm px-3.5 py-2.5 rounded-lg border border-slate-700 focus:outline-none focus:border-blue-500"
+                            >
+                                <option value="Display - Original Removed (Pulled)">Display: Original Removed (Pulled)</option>
+                                <option value="Display - LED / Market Original">Display: LED / Market Original</option>
+                                <option value="Display - In-cell">Display: In-cell</option>
+                                <option value="Display - LCD">Display: LCD</option>
+                                <option value="Used Mobile Purchase / Exchange">Used Mobile Purchase / Exchange</option>
+                                <option value="Laptop / Tablet Service or Purchase">Laptop / Tablet Service or Purchase</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Send Enquiry to 81292 19656
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Display Quality Comparison Modal -->
+    <div id="qualityModal" class="hidden fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
+            <div class="sticky top-0 bg-slate-900 text-white px-5 py-4 flex items-center justify-between">
+                <h4 class="font-bold text-base sm:text-lg">Hellotell Penta Display Quality Guide</h4>
+                <button onclick="toggleQualityGuide()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-5 space-y-4 text-xs sm:text-sm text-slate-700">
+                <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50">
+                    <h5 class="font-bold text-emerald-900 text-sm">1. Original Removed (Pulled from Phone)</h5>
+                    <p class="mt-1">100% authentic factory display extracted from an original device. Retains exact factory colors, brightness, glass durability, TrueTone (iPhone), and in-display fingerprint speed (Android).</p>
+                </div>
+                <div class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/50">
+                    <h5 class="font-bold text-blue-900 text-sm">2. LED / Market Original (OLED / AMOLED)</h5>
+                    <p class="mt-1">Premium aftermarket OLED/AMOLED screen with vibrant contrast, thin bezels, and smooth touch response. Best balance of flagship quality and price.</p>
+                </div>
+                <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/50">
+                    <h5 class="font-bold text-amber-900 text-sm">3. In-cell Display</h5>
+                    <p class="mt-1">Integrated touch-and-display panel that is thinner and brighter than standard LCDs. Reliable everyday performance at an affordable cost.</p>
+                </div>
+                <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+                    <h5 class="font-bold text-slate-900 text-sm">4. Standard LCD</h5>
+                    <p class="mt-1">Entry-level replacement panel designed for maximum budget savings or temporary phone usage/data backup.</p>
+                </div>
+            </div>
+            <div class="px-5 py-3.5 bg-slate-50 border-t border-slate-200 flex justify-end">
+                <button onclick="toggleQualityGuide()" class="px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold">Got It</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 mt-14 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-xs sm:text-sm">
+            <div>
+                <h4 class="text-white font-extrabold text-lg tracking-tight">HELLOTELL <span class="text-blue-400">PENTA</span></h4>
+                <p class="text-slate-400 mt-2 leading-relaxed">
+                    Your one-stop destination in Kochi for certified pre-owned smartphones, used laptops, tablets, accessories, and professional same-day display replacements.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Visit Our Store</h5>
+                <p class="flex items-start gap-2 text-slate-300">
+                    <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
+                    <span>Hellotell Penta<br>Ground Floor, Penta Menaka<br>Shanmugham Road, Kochi, Kerala<br>PIN: 682031</span>
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Contact &amp; Orders</h5>
+                <div class="space-y-2">
+                    <a href="tel:+918129219656" class="flex items-center gap-2 hover:text-white">
+                        <i class="fa-solid fa-phone text-blue-400"></i> +91 81292 19656
+                    </a>
+                    <a href="https://wa.me/918129219656" target="_blank" class="flex items-center gap-2 hover:text-emerald-400">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> Chat on WhatsApp
+                    </a>
+                    <a href="https://maps.google.com/?q=Penta+Menaka+Shanmugham+Road+Kochi" target="_blank" class="inline-flex items-center gap-1.5 mt-2 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">
+                        <i class="fa-solid fa-map-location-dot text-blue-400"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 py-4 px-4 text-center text-xs text-slate-500">
+            &copy; 2026 Hellotell Penta, Kochi. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating Mobile WhatsApp Button -->
+    <a href="https://wa.me/918129219656?text=Hi%20Hellotell%20Penta%2C%20I%20visited%20your%20online%20store%20and%20have%20an%20enquiry." target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-600/30 flex items-center justify-center text-2xl transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Product Catalog & Interactive Logic -->
+    <script>
+        const SHOP_WHATSAPP = "918129219656";
+
+        // Edit or add your shop's products & display prices here
+        const PRODUCTS_DATA = [
+            {
+                id: "disp-ip13",
+                category: "display",
+                platform: "iPhone",
+                name: "iPhone 13 Display Replacement",
+                badge: "Same-Day Fixing",
+                image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=600&q=80",
+                specs: "TrueTone programming included • 30 mins installation at Penta Menaka",
+                tiers: [
+                    { label: "Original Removed", price: 11500, note: "100% Apple Pulled Screen" },
+                    { label: "LED / Market Original", price: 6500, note: "Soft OLED • Deep Blacks" },
+                    { label: "In-cell", price: 3800, note: "Slim Budget Panel" },
+                    { label: "LCD", price: 2900, note: "Basic Economical Screen" }
+                ]
+            },
+            {
+                id: "disp-ip11",
+                category: "display",
+                platform: "iPhone",
+                name: "iPhone 11 Display Replacement",
+                badge: "Fast Moving",
+                image: "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=600&q=80",
+                specs: "TrueTone transfer supported • Free tempered glass with fitting",
+                tiers: [
+                    { label: "Original Removed", price: 5200, note: "100% Pulled Original" },
+                    { label: "LED / Market Original", price: 3200, note: "High Brightness Grade" },
+                    { label: "In-cell", price: 2200, note: "Smooth Touch Response" },
+                    { label: "LCD", price: 1750, note: "Standard Replacement" }
+                ]
+            },
+            {
+                id: "disp-s23",
+                category: "display",
+                platform: "Android",
+                name: "Samsung Galaxy S23 / S22 Display",
+                badge: "Android Flagship",
+                image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
+                specs: "120Hz Dynamic AMOLED • In-display ultrasonic fingerprint tested",
+                tiers: [
+                    { label: "Original Removed", price: 12800, note: "Service Pack / Pulled" },
+                    { label: "LED / Market Original", price: 7900, note: "OLED Frame Included" },
+                    { label: "In-cell", price: 4200, note: "Budget Slim Panel" },
+                    { label: "LCD", price: 3100, note: "Basic Display" }
+                ]
+            },
+            {
+                id: "disp-android-amoled",
+                category: "display",
+                platform: "Android",
+                name: "OnePlus / Vivo / Oppo / Realme Display",
+                badge: "All Android Models",
+                image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+                specs: "Nord, Reno, V-Series, X-Series, Redmi Note & Poco models available",
+                tiers: [
+                    { label: "Original Removed", price: 4800, note: "Pulled Genuine Screen" },
+                    { label: "LED / Market Original", price: 2900, note: "OLED / Fingerprint OK" },
+                    { label: "In-cell", price: 1650, note: "Best Value Choice" },
+                    { label: "LCD", price: 1250, note: "Starting Price" }
+                ]
+            },
+            {
+                id: "mob-ip14pro",
+                category: "mobile",
+                platform: "iPhone",
+                name: "iPhone 14 Pro (128GB) - Used Mint",
+                badge: "Certified Pre-Owned",
+                image: "https://images.unsplash.com/photo-1663499482523-1c0c1bae4ce1?auto=format&fit=crop&w=600&q=80",
+                specs: "Deep Purple • Battery Health 89% • Non-opened & Water-seal intact • Bill & Box",
+                price: 56500,
+                condition: "A+ Mint Condition"
+            },
+            {
+                id: "mob-s23ultra",
+                category: "mobile",
+                platform: "Android",
+                name: "Samsung Galaxy S23 Ultra 5G (256GB)",
+                badge: "Exchange Available",
+                image: "https://images.unsplash.com/photo-1678911820864-e2c567c655d7?auto=format&fit=crop&w=600&q=80",
+                specs: "Phantom Black • 12GB RAM • S-Pen Included • Store Warranty",
+                price: 54000,
+                condition: "Scratchless Condition"
+            },
+            {
+                id: "mob-ip12",
+                category: "mobile",
+                platform: "iPhone",
+                name: "iPhone 12 (128GB) - Pre-Owned",
+                badge: "Best Seller",
+                image: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=600&q=80",
+                specs: "Blue • Battery Health 86% • Face ID & TrueTone 100% Working",
+                price: 25500,
+                condition: "Clean Condition"
+            },
+            {
+                id: "lap-macbook",
+                category: "laptop",
+                platform: "Laptop",
+                name: "MacBook Air M1 (8GB / 256GB) - Used",
+                badge: "Student & Office Pick",
+                image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80",
+                specs: "Space Grey • 91% Battery Health • Original Charger Included • Kochi Store Stock",
+                price: 43500,
+                condition: "Excellent Condition"
+            },
+            {
+                id: "acc-charger",
+                category: "accessory",
+                platform: "Accessories",
+                name: "20W USB-C Fast Adapter & Braided Cable",
+                badge: "100% Genuine",
+                image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
+                specs: "Compatible with iPhone 11 to 16 Series, iPad & Samsung Fast Charging",
+                price: 1490,
+                condition: "Brand New"
+            }
+        ];
+
+        let currentCategory = "all";
+        let searchQuery = "";
+        const selectedTierIndex = {};
+
+        PRODUCTS_DATA.forEach(item => {
+            if (item.tiers) selectedTierIndex[item.id] = 0;
+        });
+
+        function formatINR(amount) {
+            return "₹" + amount.toLocaleString("en-IN");
+        }
+
+        function setCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll(".cat-btn").forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.classList.remove("bg-slate-100", "text-slate-700");
+                    btn.classList.add("bg-slate-900", "text-white");
+                } else {
+                    btn.classList.remove("bg-slate-900", "text-white");
+                    btn.classList.add("bg-slate-100", "text-slate-700");
+                }
+            });
+
+            const titles = {
+                all: "All Mobiles, Displays & Laptops",
+                display: "Mobile Display Replacement (iPhone & Android)",
+                mobile: "Certified Used Smartphones",
+                laptop: "Used Laptops & Tablets",
+                accessory: "Chargers, Tempered Glass & Accessories"
+            };
+            document.getElementById("sectionTitle").textContent = titles[cat] || titles.all;
+            renderProducts();
+        }
+
+        function selectTier(productId, index) {
+            selectedTierIndex[productId] = index;
+            renderProducts();
+        }
+
+        function clearSearch() {
+            searchQuery = "";
+            const input = document.getElementById("searchInput");
+            input.value = "";
+            document.getElementById("clearSearchBtn").classList.add("hidden");
+            renderProducts();
+        }
+
+        function toggleQualityGuide() {
+            const modal = document.getElementById("qualityModal");
+            modal.classList.toggle("hidden");
+        }
+
+        function sendCustomQuote(e) {
+            e.preventDefault();
+            const model = document.getElementById("customModel").value.trim();
+            const req = document.getElementById("customRequirement").value;
+            if (!model) return;
+            const msg = `Hi Hellotell Penta, I need a quote:
+• Model: ${model}
+• Requirement: ${req}
+Please share price and availability.`;
+            window.open(`https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById("productGrid");
+            const emptyState = document.getElementById("emptyState");
+            const countLabel = document.getElementById("itemCount");
+
+            const filtered = PRODUCTS_DATA.filter(item => {
+                const matchesCat = currentCategory === "all" || item.category === currentCategory;
+                const q = searchQuery.toLowerCase();
+                const matchesQuery =
+                    !q ||
+                    item.name.toLowerCase().includes(q) ||
+                    item.specs.toLowerCase().includes(q) ||
+                    (item.platform && item.platform.toLowerCase().includes(q));
+                return matchesCat && matchesQuery;
+            });
+
+            countLabel.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? "item" : "items"}`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = "";
+                emptyState.classList.remove("hidden");
+                return;
+            }
+            emptyState.classList.add("hidden");
+
+            grid.innerHTML = filtered.map(item => {
+                const isDisplay = Boolean(item.tiers);
+                let activePrice = item.price;
+                let activeTierName = "";
+                let activeTierNote = "";
+
+                if (isDisplay) {
+                    const idx = selectedTierIndex[item.id] || 0;
+                    const tier = item.tiers[idx];
+                    activePrice = tier.price;
+                    activeTierName = tier.label;
+                    activeTierNote = tier.note;
+                }
+
+                const waMessage = isDisplay
+                    ? `Hi Hellotell Penta, I want to book Display Replacement:
+• Model: ${item.name}
+• Quality: ${activeTierName}
+• Listed Price: ${formatINR(activePrice)}
+Is it available today?`
+                    : `Hi Hellotell Penta, I am interested in buying:
+• Item: ${item.name}
+• Price: ${formatINR(activePrice)}
+Please share more details.`;
+
+                const waLink = `https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(waMessage)}`;
+
+                return `
+                <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-44 bg-slate-100 overflow-hidden">
+                            <img src="${item.image}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-900/85 text-white backdrop-blur-sm">
+                                ${item.badge}
+                            </span>
+                            ${item.platform ? `<span class="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 text-slate-800">${item.platform}</span>` : ""}
+                        </div>
+
+                        <div class="p-4">
+                            <h4 class="font-bold text-slate-900 text-base leading-snug">${item.name}</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">${item.specs}</p>
+
+                            ${isDisplay ? `
+                                <div class="mt-3.5">
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Select Display Quality:</label>
+                                    <div class="grid grid-cols-2 gap-1.5">
+                                        ${item.tiers.map((t, i) => {
+                                            const isSelected = (selectedTierIndex[item.id] || 0) === i;
+                                            return `
+                                                <button
+                                                    type="button"
+                                                    onclick="selectTier('${item.id}', ${i})"
+                                                    class="text-left px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold transition ${
+                                                        isSelected
+                                                            ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                                                            : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
+                                                    }"
+                                                >
+                                                    <div class="truncate">${t.label}</div>
+                                                    <div class="text-[10px] ${isSelected ? "text-blue-100" : "text-slate-500"}">${formatINR(t.price)}</div>
+                                                </button>
+                                            `;
+                                        }).join("")}
+                                    </div>
+                                    <p class="text-[11px] text-blue-700 font-medium mt-2">
+                                        <i class="fa-solid fa-circle-check mr-1"></i> ${activeTierName}: ${activeTierNote}
+                                    </p>
+                                </div>
+                            ` : `
+                                <div class="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-semibold">
+                                    <i class="fa-solid fa-shield-halved"></i> ${item.condition}
+                                </div>
+                            `}
+                        </div>
+                    </div>
+
+                    <div class="px-4 pb-4 pt-2 border-t border-slate-100 flex items-center justify-between gap-3">
+                        <div>
+                            <span class="block text-[10px] uppercase font-semibold text-slate-400">${isDisplay ? "Selected Rate" : "Offer Price"}</span>
+                            <span class="text-lg font-extrabold text-slate-900">${formatINR(activePrice)}</span>
+                        </div>
+                        <a
+                            href="${waLink}"
+                            target="_blank"
+                            class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition"
+                        >
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            ${isDisplay ? "Book Now" : "Order"}
+                        </a>
+                    </div>
+                </article>
+                `;
+            }).join("");
+        }
+
+        document.getElementById("searchInput").addEventListener("input", (e) => {
+            searchQuery = e.target.value;
+            const clearBtn = document.getElementById("clearSearchBtn");
+            if (searchQuery.trim().length > 0) {
+                clearBtn.classList.remove("hidden");
+            } else {
+                clearBtn.classList.add("hidden");
+            }
+            renderProducts();
+        });
+
+        renderProducts();
+    </script>
+</body>
+</html>
